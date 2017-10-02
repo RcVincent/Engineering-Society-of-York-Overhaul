@@ -18,6 +18,28 @@ public class User {
 		
 	}
 	
+	//utility personal information method
+	public void setUserInformation(String fn, String ln, String email) {
+		this.firstname = fn;
+		this.lastname = ln;
+		this.email = email;
+	}
+	
+	//place holder method for now will have functionality later 
+	public boolean authenticate() {
+		return false;
+	}
+	
+	//to use in the login servlet 
+	public boolean logIn(String username, String password) {
+		if(login != true) {
+			login = true; 
+		}
+		
+		return login;
+	}
+	
+	
 	public int getUserID() {
 		return userID;
 	}
@@ -57,9 +79,9 @@ public class User {
 		return this.email;
 	}
 	
-	public boolean isMember(){
+	/*public boolean isMember(){
 		return this.membership;
-	}
+	}*/
 	
 	
 	
