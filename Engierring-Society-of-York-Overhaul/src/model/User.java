@@ -2,14 +2,22 @@ package model;
 
 public class User {
 
-	private String username = null;
-	private String password = null;
-	private int loginId = -1;
-	private String firstname = null;
-	private String lastname = null;
-	private String email = null;
+	private String username;
+	private String password;
+	private String firstname;
+	private String lastname;
+	private String email;
 	private boolean membership = false; 
 	private int userID; 
+	private String accountType; 
+	private String sessionID; 
+	
+	private boolean login = false; 
+	
+	public User(){
+		
+	}
+	
 	public int getUserID() {
 		return userID;
 	}
@@ -18,11 +26,9 @@ public class User {
 		this.userID = userID;
 	}
 
-	public User(){
-		
-	}
 	
-	public User(String user, String pass, int id, String fisrtname, String lastname, String email, boolean membership){
+	
+	/*public User(String user, String pass, int id, String fisrtname, String lastname, String email, boolean membership){
 		this.username = user;
 		this.password = pass;
 		this.loginId = id;
@@ -31,7 +37,7 @@ public class User {
 		this.email = email;
 		this.membership = membership;
 		
-	}
+	}*/
 	
 	public String getUsername(){
 		return this.username;
@@ -41,9 +47,7 @@ public class User {
 		return this.password;
 	}
 	
-	public int getLoginId(){
-		return this.loginId;
-	}
+	
 	
 	public String getName(){
 		return this.firstname;
@@ -67,9 +71,7 @@ public class User {
 		this.password = pass;
 	}
 	
-	public void setLoginId(int id){
-		this.loginId = id;
-	}
+	
 	
 	public void setFirstname(String firstname){
 		this.firstname = firstname;
@@ -89,6 +91,42 @@ public class User {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public boolean isMembership() {
+		return membership;
+	}
+
+	public void setMembership(boolean membership) {
+		this.membership = membership;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public String getSessionID() {
+		return sessionID;
+	}
+
+	public void setSessionID(String sessionID) {
+		this.sessionID = sessionID;
+	}
+
+	public boolean isLogin() {
+		return login;
+	}
+
+	public void setLogin(boolean login) {
+		this.login = login;
+	}
+
+	public String getFirstname() {
+		return firstname;
 	}
 
 }
