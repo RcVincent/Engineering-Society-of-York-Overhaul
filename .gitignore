@@ -1,1 +1,13 @@
 /Engierring-Society-of-York-Overhaul/
+
+
+/bin/
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+
+/test.db/
