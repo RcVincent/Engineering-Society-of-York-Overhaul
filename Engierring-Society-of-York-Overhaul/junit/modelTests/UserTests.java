@@ -33,6 +33,10 @@ public class UserTests {
 		user2.setUserInformation("Tiny", "Tim", "summereqsuire@e.org");
 		
 		user3 = new User(); 
+		user3.setAccountType("");
+		user3.setUsername("");
+		user3.setPassword("");
+		user3.setUserInformation("", "", "");
 		
 		Admin1 = new User();
 		
@@ -65,9 +69,15 @@ public class UserTests {
 		assertEquals("summer4eva", pass3);
 	}
 	
-	
+	@Test 
 	public void testPersonalInfo() {
+		String fname = user2.getFirstname();
+		String lname = user2.getLastname();
+		String email = user2.getEmail();
 		
+		assertEquals("Tiny", fname);
+		assertEquals("Tim", lname);
+		assertEquals("summereqsuire@e.org", email);
 	}
 	
 	@Test 
@@ -79,7 +89,15 @@ public class UserTests {
 		assertEquals("Admin", admin);
 	}
 	
+	@Test
 	public void testNull() {
+		String password = user3.getPassword();
+		String username = user3.getUsername();
+		String type = user3.getAccountType();
+		
+		assertNull(password);
+		assertNull(username);
+		assertNull(type);
 		
 	}
 }
